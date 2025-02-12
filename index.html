@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--Date 17.01.25 -->
+<!--
+
+99 points
+
+when winning keep message until continue button is pressed
+
+-->
+
+<head>
+    <link rel="manifest" href="/manifest.json" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no" />
+    <title>Marcador Taekwondo</title>
+    <link rel="stylesheet" href="tkd.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="menuSection">
+            <h1>Marcador TKD-v2.25</h1>
+            <label class="Opciones">Opciones</label>
+            <label class="Duracion">Duración de round en segundos</label>
+            <input class="roundTiempo" value="90" id="roundTiempo"/>
+
+            <label class="Puntos">Puntos por click</label>
+            <input class="incrementoPuntos" value="1" id="incrementoPuntos">
+
+            <label class="instruccion">Para continuar gire el dispositivo</label>
+
+            <label class="Autor">Eduardo Aguilar</label>
+        </div>
+    </div>
+    <div class="seccionCentral">
+        <h1>TKD</h1>
+        <button id="ComenzarRonda">Iniciar</button>
+
+        <h2>Round:&nbsp;<span id="numeroRound"></span></h2>
+        <div class="tablaResultados">
+            <table class="tablaResultadosDisplay">
+                <tr>
+                    <th>Rojo</th>
+                    <th></th>
+                    <th>Azul</th>
+                </tr>
+                <tr>
+                    <td><span id="roundResults_0_0"></span></td>
+                    <td><span id="roundResults_0_1"></span>&nbsp;-&nbsp;<span id="roundResults_0_2"></span></td>
+                    <td><span id="roundResults_0_3"></span></td>
+                </tr>
+                <tr>
+                    <td><span id="roundResults_1_0"></span></td>
+                    <td><span id="roundResults_1_1"></span>&nbsp;-&nbsp;<span id="roundResults_1_2"></span></td>
+                    <td><span id="roundResults_1_3"></span></td>
+                </tr>
+                <tr>
+                    <td><span id="roundResults_2_0"></span></td>
+                    <td><span id="roundResults_2_1"></span>&nbsp;-&nbsp;<span id="roundResults_2_2"></span></td>
+                    <td><span id="roundResults_2_3"></span></td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+    <div class="rojoContenedor">
+        <h1><span id="puntosRojo">0</span></h1>
+    </div>
+    <div class="amonestacionesRojo">
+        <label class="amonestacionesRojoNumero"> <span id="reduccionesRojo">0</span> </label>
+    </div>
+
+    <div class="azulContenedor">
+        <h1><span id="puntosAzul">0</span></h1>
+    </div>
+    <div class="amonestacionesAzul">
+        <label class="amonestacionesAzulNumero"><span id="reduccionesAzul">0</span></label>
+    </div>
+
+    <label class="pantallaCompleta">
+        <input checked="checked" type="checkbox" id="fullscreen" />
+
+        <svg viewBox="0 0 448 512" height="1em" xmlns="http://www.w3.org/2000/svg" class="expand">
+            <path
+                d="M32 32C14.3 32 0 46.3 0 64v96c0 17.7 14.3 32 32 32s32-14.3 32-32V96h64c17.7 0 32-14.3 32-32s-14.3-32-32-32H32zM64 352c0-17.7-14.3-32-32-32s-32 14.3-32 32v96c0 17.7 14.3 32 32 32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H64V352zM320 32c-17.7 0-32 14.3-32 32s14.3 32 32 32h64v64c0 17.7 14.3 32 32 32s32-14.3 32-32V64c0-17.7-14.3-32-32-32H320zM448 352c0-17.7-14.3-32-32-32s-32 14.3-32 32v64H320c-17.7 0-32 14.3-32 32s14.3 32 32 32h96c17.7 0 32-14.3 32-32V352z">
+            </path>
+        </svg>
+        <svg viewBox="0 0 448 512" height="1em" xmlns="http://www.w3.org/2000/svg" class="compress">
+            <path
+                d="M160 64c0-17.7-14.3-32-32-32s-32 14.3-32 32v64H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h96c17.7 0 32-14.3 32-32V64zM32 320c-17.7 0-32 14.3-32 32s14.3 32 32 32H96v64c0 17.7 14.3 32 32 32s32-14.3 32-32V352c0-17.7-14.3-32-32-32H32zM352 64c0-17.7-14.3-32-32-32s-32 14.3-32 32v96c0 17.7 14.3 32 32 32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H352V64zM320 320c-17.7 0-32 14.3-32 32v96c0 17.7 14.3 32 32 32s32-14.3 32-32V384h64c17.7 0 32-14.3 32-32s-14.3-32-32-32H320z">
+            </path>
+        </svg>
+    </label>
+    <script src="tkd.js"></script>
+</body>
+
+</html>
